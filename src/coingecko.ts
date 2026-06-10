@@ -96,7 +96,14 @@ export class CoinGeckoClient {
   private async get(path: string): Promise<any> {
     const sep = path.includes("?") ? "&" : "?";
     const url = `${this.env.COINGECKO_BASE}${path}${this.env.COINGECKO_API_KEY ? `${sep}x_cg_demo_api_key=${this.env.COINGECKO_API_KEY}` : ""}`;
-    const r = await fetch(url, { headers: { Accept: "application/json" } });
+    // CoinGecko began rejecting requests without a descriptive User-Agent in 2024;
+    // a stable identifier prevents 403s on the free tier.
+    const r = await fetch(url, {
+      headers: {
+        Accept: "application/json",
+        "User-Agent": "crypto-prices-mcp/0.1 (prakshatechnologies@gmail.com)",
+      },
+    });
     if (r.status === 429) throw new Error("CoinGecko rate limit; backoff or supply COINGECKO_API_KEY for higher quota.");
     if (!r.ok) throw new Error(`CoinGecko ${r.status}: ${(await r.text()).slice(0, 200)}`);
     return r.json();
