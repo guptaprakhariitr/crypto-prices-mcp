@@ -1,0 +1,15 @@
+{
+  "name": "crypto-prices-mcp",
+  "version": "0.1.0",
+  "private": false,
+  "description": "MCP server for live + historical cryptocurrency prices via CoinGecko free API.",
+  "type": "module",
+  "main": "src/index.ts",
+  "homepage": "https://crypto-prices-mcp.prakhar-cognizance.workers.dev",
+  "repository": { "type": "git", "url": "https://github.com/guptaprakhariitr/crypto-prices-mcp.git" },
+  "scripts": { "dev": "wrangler dev", "deploy": "wrangler deploy", "test": "vitest run", "typecheck": "tsc --noEmit", "tail": "wrangler tail" },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "claude", "cursor", "crypto", "bitcoin", "ethereum", "coingecko", "prices"],
+  "author": "Prakhar Gupta <prakshatechnologies@gmail.com>",
+  "license": "MIT",
+  "devDependencies": { "@cloudflare/workers-types": "^4.20260101.0", "typescript": "^5.5.0", "vitest": "^2.0.0", "wrangler": "^3.80.0" }
+}

@@ -1,0 +1,28 @@
+name = "crypto-prices-mcp"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "2c717afe74614bfeb63a8bcf7fb3e30b"
+
+[[kv_namespaces]]
+binding = "USAGE"
+id = "0dae045943b34d0c8486f76e84098900"
+
+[vars]
+UPGRADE_URL = "https://crypto-prices-mcp.prakhar-cognizance.workers.dev/upgrade"
+COINGECKO_BASE = "https://api.coingecko.com/api/v3"
+PRODUCT_NAME = "crypto-prices-mcp"
+DODO_PRODUCT_ID_SOLO = "pdt_0NgkbtzlsRghwe1m0rCOG"
+DODO_PRODUCT_ID_TEAM = "pdt_0Ngkbu1nGliM8GAvvttpX"
+DODO_PRODUCT_ID_PRO  = "pdt_0Ngkbu62BldHxIdXjFmiW"
+FROM_EMAIL = "prakshatechnologies@gmail.com"
+DODO_BASE = "https://live.dodopayments.com"
+CUSTOMER_PORTAL_RETURN_URL = "https://crypto-prices-mcp.prakhar-cognizance.workers.dev/account"
+
+# Optional: COINGECKO_API_KEY (free Demo key from coingecko.com/en/api/pricing) raises rate limits.
