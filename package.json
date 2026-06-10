@@ -5,7 +5,7 @@
   "description": "MCP server for live + historical cryptocurrency prices via CoinGecko free API.",
   "type": "module",
   "main": "src/index.ts",
-  "homepage": "https://crypto-prices-mcp.prakhar-cognizance.workers.dev",
+  "homepage": "https://crypto-prices-mcp.atlasword.workers.dev",
   "repository": { "type": "git", "url": "https://github.com/guptaprakhariitr/crypto-prices-mcp.git" },
   "scripts": { "dev": "wrangler dev", "deploy": "wrangler deploy", "test": "vitest run", "typecheck": "tsc --noEmit", "tail": "wrangler tail" },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "claude", "cursor", "crypto", "bitcoin", "ethereum", "coingecko", "prices"],

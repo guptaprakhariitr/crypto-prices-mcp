@@ -71,7 +71,7 @@ const LLMS_TXT = `# crypto-prices-mcp
 - crypto_trending()
 - crypto_market_global()
 
-Endpoint: https://crypto-prices-mcp.prakhar-cognizance.workers.dev/mcp
+Endpoint: https://crypto-prices-mcp.atlasword.workers.dev/mcp
 `;
 function renderLanding(env: Env, url: URL): string {
   const productName = env.PRODUCT_NAME ?? "crypto-prices-mcp";
@@ -86,5 +86,5 @@ function renderLanding(env: Env, url: URL): string {
 <style>body{font:16px/1.5 system-ui,sans-serif;max-width:720px;margin:4rem auto;padding:0 1rem}code{background:#f3f3f3;padding:.1em .35em;border-radius:3px}</style>${meta}
 </head>
 <body><h1>crypto-prices-mcp</h1><p>Live + historical crypto prices via CoinGecko for AI agents.</p>
-<p><code>POST https://crypto-prices-mcp.prakhar-cognizance.workers.dev/mcp</code></p></body></html>`;
+<p><code>POST https://crypto-prices-mcp.atlasword.workers.dev/mcp</code></p></body></html>`;
 }
