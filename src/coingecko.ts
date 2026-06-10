@@ -35,7 +35,9 @@ export class CoinGeckoClient {
 
   async prices(opts: { ids: string[]; vs: string }): Promise<PriceQuote[]> {
     const key = `prices:${stableKey({ ids: opts.ids.sort(), vs: opts.vs })}`;
-    return this.cache.memoize(key, 60, async () => {
+    // 5-min TTL on the free CoinGecko tier — they rate-limit to ~5-15 req/min
+    // and the cache amortizes across all callers querying the same pair.
+    return this.cache.memoize(key, 60 * 5, async () => {
       const params = new URLSearchParams({
         vs_currency: opts.vs,
         ids: opts.ids.join(","),
