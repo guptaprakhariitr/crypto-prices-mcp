@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.guptaprakhariitr/crypto-prices-mcp",
+  "title": "Crypto Prices",
+  "description": "Live and historical cryptocurrency prices via CoinGecko free API.",
+  "version": "0.1.0",
+  "websiteUrl": "https://crypto-prices-mcp.atlasword.workers.dev/",
+  "repository": {
+    "url": "https://github.com/guptaprakhariitr/crypto-prices-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://crypto-prices-mcp.atlasword.workers.dev/mcp"
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@insnapsprakhar/crypto-prices-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
