@@ -205,10 +205,10 @@ MIT — see [LICENSE](LICENSE).
 
 ## Install via npm (one-liner)
 
-A thin launcher is published as [`@atlasword/crypto-prices-mcp`](https://www.npmjs.com/package/@atlasword/crypto-prices-mcp) on npm. No manual URL to copy/paste:
+A thin launcher is published as [`@insnapsprakhar/crypto-prices-mcp`](https://www.npmjs.com/package/@insnapsprakhar/crypto-prices-mcp) on npm. No manual URL to copy/paste:
 
 ```bash
-npx -y @atlasword/crypto-prices-mcp
+npx -y @insnapsprakhar/crypto-prices-mcp
 ```
 
 Or wire it into your MCP client:
@@ -218,7 +218,7 @@ Or wire it into your MCP client:
   "mcpServers": {
     "crypto-prices": {
       "command": "npx",
-      "args": ["-y", "@atlasword/crypto-prices-mcp"]
+      "args": ["-y", "@insnapsprakhar/crypto-prices-mcp"]
     }
   }
 }
